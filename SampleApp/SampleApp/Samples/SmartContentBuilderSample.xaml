@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SampleApp.Samples.SmartContentBuilderSample"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:abstractions="clr-namespace:Xam.Plugin.WebView.Abstractions;assembly=Xam.Plugin.WebView.Abstractions"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <abstractions:FormsWebView
+                x:Name="WebContent"
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Source="https://stage.scb.sistemlms.com/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODA1MDQxNzMsImV4cCI6MzYxNTgwNTAwNTczLCJpc3MiOiJtYW5hZ2VyIiwic3ViIjoxLCJ1c3IiOiJodHRwOlwvXC9wbGF5ZXJkZXYwMS5hbGNoZW15LWVuZy5jb21cL2dlZXRoYVwvYXBpXC91c2VyXC9zY2JcLyIsImp0aSI6IjNiNGVkOGNkYWY1YjdiNjE3ZjRmYzJkZTcwOGYyNTdkNDQ5NmUxY2I5OTdhMjE1OTgzY2MxMGNiMjYyM2FmYTYifQ.Iz44Ezrhr_1P4HU6Jx71WzxGuJZ4V5u4SKoUSSTv39I" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

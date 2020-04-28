@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:webview="clr-namespace:Xam.Plugin.WebView.Abstractions;assembly=Xam.Plugin.WebView.Abstractions"
+             x:Class="SampleApp.Samples.HeadersSample"
+             Title="HeadersSample">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+
+        <webview:FormsWebView x:Name="WebContent" ContentType="Internet" Source="https://httpbin.org/headers" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" />
+
+        <Entry x:Name="GlobalKey" Placeholder="Global Key" Grid.Row="1" Grid.Column="0" />
+        <Entry x:Name="GlobalValue" Placeholder="Global Value" Grid.Row="1" Grid.Column="1" />
+
+        <Entry x:Name="LocalKey" Placeholder="Local Key" Grid.Row="2" Grid.Column="0" />
+        <Entry x:Name="LocalValue" Placeholder="Local Value" Grid.Row="2" Grid.Column="1" />
+        
+        <Button Text="Add Global" Grid.Row="1" Grid.Column="2" Clicked="OnGlobalAdd" />
+        <Button Text="Add Local" Grid.Row="2" Grid.Column="2" Clicked="OnLocalAdd" />
+        <Button Text="Reload" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Clicked="OnReloadClicked" />
+        
+    </Grid>
+    
+</ContentPage>

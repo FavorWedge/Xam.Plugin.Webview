@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:abstractions="clr-namespace:Xam.Plugin.WebView.Abstractions;assembly=Xam.Plugin.WebView.Abstractions"
+             mc:Ignorable="d"
+             x:Class="SampleApp.Samples.ContentPlayerSample">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <abstractions:FormsWebView
+                x:Name="WebContent"
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Source="https://elearning-stage.sistemlms.com/dev_content_player_versioned/2.1.25/HybridIndex.html" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="0"
+                Clicked="AddCallback"
+                Text="Add Callback" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="1"
+                Clicked="CallCallback"
+                Text="Call Callback" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
